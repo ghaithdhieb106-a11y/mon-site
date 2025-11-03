@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Le parcours de Ghaith</title>
+  <link rel="stylesheet" href="ghqith.css" />
+  <script defer src="ghaith.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">G</div>
+        <div class="brand-text">
+          <h1>>Bienvenue chez moi</h1>
+          <p class="subtitle">Étudiant · Développeur · Sportif</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-card">
+          <div class="avatar-wrap">
+            <img src="profile.jpeg" alt="Photo de Ghaith" class="avatar" />
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="hero-content">
+            <h2>Salut — je suis <span>Ghaith Dieb</span></h2>
+            <p class="lead">20 ans · Mahdia, Tunisie — Étudiant en faculté, passionné par la musculation, la boxe, le football et la programmation.</p>
+            <div class="hero-ctas">
+              <a class="btn primary" href="#about">En savoir plus</a>
+              <a class="btn ghost" href="mailto:ghaithdhieb106@gmail.com">Me contacter</a>
+            </div>
+            <ul class="facts">
+              <li><strong>Naissance:</strong> 6 septembre 2005</li>
+              <li><strong>Objectif:</strong> Avoir une grande place dans le futur</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <div class="container">
+          <h3>À propos de moi</h3>
+          <div class="about-grid">
+            <div class="text">
+              <p>Je suis étudiant, motivé, avec une forte capacité à raisonner et résoudre des problèmes. J'aime le sport (musculation, boxe, football) et je développe mes compétences en programmation pour construire des projets concrets et utiles.</p>
+              <p>Je suis curieux, persévérant, et je travaille pour atteindre des objectifs ambitieux.</p>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <span class="num">20</span>
+                <span class="label">Ans</span>
+              </div>
+              <div class="stat">
+                <span class="num">Mahdia</span>
+                <span class="label">Ville</span>
+              </div>
+              <div class="stat">
+                <span class="num">Étudiant</span>
+                <span class="label">Statut</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h3>Compétences & Passions</h3>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h4>Programmation</h4>
+              <p>Bonne logique, résolution de problème, projets pratiques (HTML/CSS/JS, SQL basique).</p>
+            </div>
+            <div class="skill-card">
+              <h4>Sport</h4>
+              <p>Musculation, boxe, football — discipline et persévérance.</p>
+            </div>
+            <div class="skill-card">
+              <h4>Soft Skills</h4>
+              <p>Organisation, raisonnement critique, travail en équipe.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section id="gallery" class="section gallery">
+        <div class="container">
+          <h3>Galerie</h3>
+          <div class="gallery-grid">
+            <button class="thumb" data-full="img1.jpg"><img src="img1.jpeg" alt="Ghaith 1" /></button>
+            <button class="thumb" data-full="img2.jpeg"><img src="img2.jpeg" alt="Ghaith 2" /></button>
+            <button class="thumb" data-full="img3.jpg"><img src="img3.jpeg" alt="Ghaith 3" /></button>
+            <button class="thumb" data-full="img4.jpg"><img src="img4.jpeg" alt="Ghaith 4" /></button>
+            <button class="thumb" data-full="img5.jpg"><img src="img5.jpeg" alt="Ghaith 5" /></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <h3>Contact</h3>
+            <p>Tu peux m'écrire directement :</p>
+            <p class="email"><a href="mailto:ghaithdhieb106@gmail.com">ghaithdhieb106@gmail.com</a></p>
+            <a href="https://wa.me/21624000897" target="_blank" class="whatsapp-btn">
+                💬 Me contacter sur WhatsApp
+              </a>
+          </div>
+          <form class="contact-form" onsubmit="return handleContact(event)">
+            <label>
+              <span>Ton nom</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Ton email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Envoyer</button>
+            </div>
+            <p class="form-note">(Ce formulaire ouvre ton client mail pour envoyer — pas de back-end requis.)</p>
+            
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 — Ghaith Dieb · Mahdia · Créé avec ❤️</p>
+    </footer>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="close" id="lb-close" aria-label="Fermer">✕</button>
+      <img id="lb-img" src="" alt="Agrandissement" />
+    </div>
+  </div>
+</body>
+</html>
